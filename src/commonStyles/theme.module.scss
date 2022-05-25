@@ -1,0 +1,50 @@
+@import "../commonStyles/variables.scss";
+
+.themeList {
+  margin: 0;
+  padding: 0;
+}
+
+.themeItem {
+  list-style: none;
+  height: 50px;
+  background: white;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  color: $color-text;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 35px;
+    background-color: red;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(90deg, $color-button 71%, rgb(2, 112, 85) 82%);
+  }
+}
+
+.themeCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, gray 15%, rgb(72, 75, 75));
+  margin-right: 5px;
+
+  &--active {
+    background: linear-gradient(180deg, rgb(0, 244, 7) 15%, rgb(72, 75, 75));
+  }
+}
